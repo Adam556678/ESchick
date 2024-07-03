@@ -103,6 +103,8 @@ class ProductCardVertical extends StatelessWidget {
                     price: '35.5',
                   ),
                 ),
+
+                /// Add to cart Button
                 Container(
                   decoration: const BoxDecoration(
                     color: AppColors.dark,
