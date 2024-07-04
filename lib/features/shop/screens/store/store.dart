@@ -1,5 +1,6 @@
 import 'package:e_commerce/common/widgets/appbar/tab_bar.dart';
 import 'package:e_commerce/common/widgets/brands/app_brand_card.dart';
+import 'package:e_commerce/features/shop/screens/brand/all_brands.dart';
 import 'package:e_commerce/features/shop/screens/store/widgets/app_category_tab.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,7 @@ import 'package:e_commerce/common/widgets/texts/app_section_heading.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:e_commerce/utils/helpers/helper_functions.dart';
+import 'package:get/get.dart';
 
 class Store extends StatelessWidget {
   const Store({super.key});
@@ -60,7 +62,7 @@ class Store extends StatelessWidget {
                     //Feature Brands
                     AppSectionHeading(
                       title: 'Feature Brands',
-                      onPressed: () {},
+                      onPressed: () => Get.to(() => const AllBrandsScreen()),
                     ),
                     const SizedBox(height: AppSizes.spaceBtwItems / 1.5),
 

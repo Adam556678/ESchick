@@ -12,8 +12,9 @@ class AppBrandCard extends StatelessWidget {
   const AppBrandCard({
     super.key,
     this.showBorder = false,
+    this.onTap,
   });
-
+  final void Function()? onTap;
   final bool showBorder;
 
   @override
@@ -21,7 +22,7 @@ class AppBrandCard extends StatelessWidget {
     bool isDark = AppHelperFunctions.isDarkMode(context);
 
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: AppRoundedContainer(
         padding: const EdgeInsets.all(AppSizes.sm),
         showBorder: showBorder,
