@@ -1,10 +1,10 @@
 /// Custom exception class to handle various Firebase-related errors.
-class FirebaseExceptions implements Exception {
+class AppFirebaseExceptions implements Exception {
   /// The error code associated with the exception.
   final String code;
 
   /// Constructor that takes an error code.
-  FirebaseExceptions(this.code);
+  AppFirebaseExceptions(this.code);
 
   /// Get the corresponding error message based on the error code.
   String get message {

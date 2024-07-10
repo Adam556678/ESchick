@@ -1,4 +1,4 @@
-import 'package:e_commerce/features/authentication/screens/onboarding/onboarding_screen.dart';
+import 'package:e_commerce/bindings/general_bindings.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/constants/text_strings.dart';
 import 'package:e_commerce/utils/theme/theme.dart';
@@ -16,6 +16,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
+      initialBinding: GeneralBindings(),
       home: const Scaffold(
         backgroundColor: AppColors.primary,
         body: Center(
