@@ -5,6 +5,7 @@ import 'package:e_commerce/features/authentication/screens/signup/verify_email.d
 import 'package:e_commerce/features/personalization/model/user_model.dart';
 import 'package:e_commerce/utils/helpers/network_manager.dart';
 import 'package:e_commerce/utils/popups/full_screen_loader.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -79,7 +80,7 @@ class SignupController extends GetxController {
       );
 
       //verify email screen
-      Get.to(() => const VerifyEmailScreen());
+      Get.to(() => VerifyEmailScreen(email: email.text.trim()));
     } catch (e) {
       AppLoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
     }
